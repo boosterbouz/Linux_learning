@@ -1,0 +1,60 @@
+formation:
+  titre: Plan de formation Linux embarqué pour casque intelligent
+  version: v0.3
+  objectifs:
+    - Maîtriser les bases de Linux embarqué
+    - Développer des applications pour une carte Nucleo F103RB
+    - Mettre en œuvre des traitements de signal et d'image
+    - Explorer l'intelligence artificielle embarquée
+  chapitres:
+    - titre: Fondamentaux de Linux
+      contenu:
+        - Concepts de base
+        - Gestion des processus
+        - Système de fichiers
+        - Réseau
+        - RTOS
+    - titre: Introduction à l'embarqué
+      contenu:
+        - Architecture d'un système embarqué
+        - Microcontrôleurs
+        - Capteurs (accéléromètre, gyroscope, etc.)
+        - Interfaces de communication (I2C, SPI)
+    - titre: Développement pour l'embarqué
+      contenu:
+        - Langages de programmation (C, C++)
+        - Environnement de développement
+        - Outils de débogage
+        - Traitement de signal numérique
+        - Traitement d'images
+    - titre: Distributions Linux embarquées
+      contenu:
+        - Choix d'une distribution
+        - Configuration
+        - Optimisation
+    - titre: Projets pratiques
+      projets:
+        - titre: Acquisition de données d'un capteur
+          technologies:
+            - Capteur de mouvement
+            - Écran LCD
+          objectifs:
+            - Mesurer les mouvements de la tête
+        - titre: Traitement d'images en noir et blanc
+          technologies:
+            - Caméra
+            - OpenCV
+          objectifs:
+            - Détection d'objets simples
+        - titre: Communication sans fil
+          technologies:
+            - Bluetooth
+            - Wi-Fi
+          objectifs:
+            - Envoyer des données à un smartphone
+    - titre: Intelligence artificielle embarquée
+      contenu:
+        - Apprentissage automatique
+        - Réseaux de neurones
+        - TensorFlow Lite
+        - Exemples d'applications
