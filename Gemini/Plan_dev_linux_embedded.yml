@@ -1,60 +1,101 @@
-formation:
-  titre: Plan de formation Linux embarqué pour casque intelligent
-  version: v0.3
-  objectifs:
-    - Maîtriser les bases de Linux embarqué
-    - Développer des applications pour une carte Nucleo F103RB
-    - Mettre en œuvre des traitements de signal et d'image
-    - Explorer l'intelligence artificielle embarquée
-  chapitres:
-    - titre: Fondamentaux de Linux
-      contenu:
-        - Concepts de base
-        - Gestion des processus
-        - Système de fichiers
-        - Réseau
-        - RTOS
-    - titre: Introduction à l'embarqué
-      contenu:
-        - Architecture d'un système embarqué
-        - Microcontrôleurs
-        - Capteurs (accéléromètre, gyroscope, etc.)
-        - Interfaces de communication (I2C, SPI)
-    - titre: Développement pour l'embarqué
-      contenu:
-        - Langages de programmation (C, C++)
-        - Environnement de développement
-        - Outils de débogage
-        - Traitement de signal numérique
-        - Traitement d'images
-    - titre: Distributions Linux embarquées
-      contenu:
-        - Choix d'une distribution
-        - Configuration
-        - Optimisation
-    - titre: Projets pratiques
-      projets:
-        - titre: Acquisition de données d'un capteur
-          technologies:
-            - Capteur de mouvement
-            - Écran LCD
-          objectifs:
-            - Mesurer les mouvements de la tête
-        - titre: Traitement d'images en noir et blanc
-          technologies:
-            - Caméra
-            - OpenCV
-          objectifs:
-            - Détection d'objets simples
-        - titre: Communication sans fil
-          technologies:
-            - Bluetooth
-            - Wi-Fi
-          objectifs:
-            - Envoyer des données à un smartphone
-    - titre: Intelligence artificielle embarquée
-      contenu:
-        - Apprentissage automatique
-        - Réseaux de neurones
-        - TensorFlow Lite
-        - Exemples d'applications
+---
+# Informations sur le projet
+projet:
+  nom: Casque de réalité virtuelle 360 degrés Halo-like
+  description: Développement d'un casque de réalité virtuelle offrant une immersion à 360 degrés avec des fonctionnalités de détection d'objets en temps réel.
+  auteur: Azzi zine
+  date_creation: 2023-11-24
+  version: v0.4
+  licence: Domaine public
+
+# Technologies utilisées
+technologies:
+  langages:
+    - C
+    - C++
+    - Python
+  outils:
+    - CMake: 3.22 (Gestion de projet)
+    - VSCode (Environnement de développement)
+    - PlantUML (Génération de diagrammes)
+    - STM32CubeIDE (Environnement de développement pour STM32)
+  bibliothèques:
+    - OpenCV: 4.5.5 (Traitement d'images)
+    - FreeRTOS: 10.4.3 (Système d'exploitation temps réel)
+  matériel:
+    - Microcontrôleur STM32 Nucleo-F103RB
+
+# Structure du projet
+structure:
+  - src: Contient les fichiers sources du projet
+  - include: Contient les fichiers d'en-têtes
+  - build: Contient les fichiers générés lors de la compilation
+
+# Configuration CMake
+cmake:
+  # Fichier CMakeLists.txt à créer dans le répertoire 'src'
+  # Ce fichier configure le processus de compilation du projet
+
+# Architecture du système
+architecture:
+  diagrammes:
+    - séquence: interaction_utilisateur_systeme.puml (Diagramme de séquence UML)
+    - classes: structure_logicielle.puml (Diagramme de classes UML)
+    - composants: architecture_hardware.puml (Diagramme de composants UML)
+
+# Plan théorique
+theorie:
+  # Introduction
+  introduction:
+    objectif: Développer un casque VR 360 avec détection d'objets en temps réel.
+    context: Présentation du marché de la réalité virtuelle, des challenges techniques, etc.
+    état_de_lart: Revue des technologies existantes, des approches similaires et des avancées récentes.
+
+  # Fondamentaux techniques
+  fondamentaux:
+    hardware:
+      microcontroleur: Présentation du STM32, de ses caractéristiques et de son choix.
+      capteurs: Description des capteurs utilisés (IMU, caméra), de leurs principes de fonctionnement et de leur intégration dans le système.
+      affichage: Choix de la technologie d'affichage (OLED), caractéristiques et contraintes.
+      interfaces: Explication des différents protocoles de communication (I2C, SPI, UART).
+    software:
+      systeme_exploitation: Présentation de FreeRTOS, de ses fonctionnalités et de son adaptation au projet.
+      langages: Choix de C et C++ pour leur performance et leur portabilité.
+      outils: Présentation détaillée de chaque outil utilisé (CMake, VSCode, STM32CubeIDE, PlantUML) et de leurs fonctionnalités.
+      bibliotheques: Explication du rôle de OpenCV et FreeRTOS dans le projet.
+
+  # Algorithmes et traitements de signal
+  algorithmes:
+    traitement_image:
+      acquisition: Méthodes d'acquisition d'images depuis la caméra.
+      pretraitement: Techniques de réduction du bruit, amélioration du contraste, etc.
+      detection: Algorithmes de détection de contours, de segmentation et de reconnaissance d'objets.
+    traitement_signal:
+      acquisition_capteurs: Acquisition des données des capteurs IMU.
+      filtrage: Techniques de filtrage pour éliminer le bruit et améliorer la précision des mesures.
+      estimation: Méthodes d'estimation des paramètres (orientation, position, etc.).
+    intelligence_artificielle:
+      reseaux_neuronaux: Présentation des CNN et de leur application à la détection d'objets.
+      apprentissage: Processus d'entraînement et d'optimisation des modèles.
+      inference: Utilisation des modèles entraînés en temps réel sur le microcontrôleur.
+
+  # Architecture du système
+  architecture:
+    description: Présentation détaillée de l'architecture matérielle et logicielle du système.
+    diagrammes: Référence aux diagrammes UML créés.
+    flux_donnees: Description du flux de données entre les différents composants.
+    gestion_taches: Explication de la gestion des tâches et des interruptions.
+
+  # Développement et tests
+  developpement:
+    environnement: Configuration de l'environnement de développement.
+    methodologie: Choix d'une méthodologie de développement (Agile, Waterfall).
+    tests: Mise en place de tests unitaires, d'intégration et fonctionnels.
+    optimisation: Techniques d'optimisation du code et des performances.
+
+  # Perspectives
+  perspectives:
+    evolutions: Possibilités d'évolution du projet (ajout de nouvelles fonctionnalités, amélioration des performances).
+    limitations: Limitations actuelles du projet et pistes d'amélioration.
+
+# ... (suite du YAML)
